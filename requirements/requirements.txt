@@ -4,4 +4,4 @@ prometheus_client==0.7.1
 prometheus-async==19.2.0
 asyncio==3.4.3
 aiobotocore==0.10.4
-PyYAML==3.12
+PyYAML==5.1
