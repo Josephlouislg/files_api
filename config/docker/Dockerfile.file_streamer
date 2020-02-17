@@ -1,0 +1,14 @@
+FROM python:3.7.5-slim as file_streamer
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    g++ \
+    make \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+ADD ./config /app/config
+ADD ./file_streamer /app/file_streamer
+
+RUN pip3 install -r file_streamer/requirements/requirements.txt
